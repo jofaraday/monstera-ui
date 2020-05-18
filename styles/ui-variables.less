@@ -1,0 +1,95 @@
+@import "colors";
+
+
+// Text Colors
+@text-color:           @spider;
+@text-color-subtle:    mix(@spider,@air,60%);
+@text-color-highlight: mix(@spider,@air,20%);
+@text-color-selected:  @air;
+
+@text-color-info:      @monstera;
+@text-color-success:   @fern;
+@text-color-warning:   saturate(mix(@pothos,@croton,40%),160%);
+@text-color-error:     @croton;
+@text-color-fatal:     @croton;
+
+@text-color-reverse:   @alocasia;
+
+
+// Background colors
+@background-color-info:      @monstera;
+@background-color-success:   @fiddle;
+@background-color-warning:   darken(saturate(mix(@pothos,@croton,40%),160%),10%);
+@background-color-error:     darken(@croton,10%);
+@background-color-fatal:     darken(@croton,10%);
+
+@background-color-highlight: lighten(@alocasia,8%);
+@background-color-selected:  darken(@alocasia,2%);
+@app-background-color:       lighten(@alocasia,3%);
+@alt-background-color:       darken(@alocasia,2%);
+
+@background-color-reverse:   @air;
+
+
+// Base colors
+@base-background-color:   @alocasia;
+@base-border-color:       darken(@alocasia,4%);
+
+
+// Component colors
+@pane-item-background-color:        @base-background-color;
+@pane-item-border-color:            @base-border-color;
+
+@input-background-color:            lighten(@base-background-color,3%);
+@input-border-color:                lighten(@base-background-color,3%);
+
+@tool-panel-background-color:       darken(@base-background-color,2%);
+@tool-panel-border-color:           @base-border-color;
+
+@inset-panel-background-color:      lighten(@base-background-color, 3%);
+@inset-panel-border-color:          @base-border-color;
+
+@panel-heading-background-color:    @base-background-color;
+@panel-heading-border-color:        @base-border-color;
+
+@overlay-background-color:          darken(@base-background-color, 3%);
+@overlay-border-color:              @base-border-color;
+
+@button-background-color:           darken(@background-color-info,18%);
+@button-background-color-hover:     darken(@background-color-info,10%);
+@button-background-color-selected:  darken(@background-color-info,8%);
+@button-border-color:               darken(@background-color-info,18%);
+
+@tab-bar-background-color:          darken(@base-background-color, 3%);
+@tab-bar-border-color:              darken(@base-background-color, 10%);
+@tab-background-color:              darken(@base-background-color, 3%);
+@tab-background-color-active:       lighten(@base-background-color, 2%);
+@tab-border-color:                  lighten(@base-background-color, 10%);
+
+@tree-view-background-color:        lighten(@base-background-color,2%);
+@tree-view-border-color:            @base-border-color;
+
+
+// Site colors
+@ui-site-color-1:@background-color-info;
+@ui-site-color-2:@background-color-success;
+@ui-site-color-3:@background-color-warning;
+@ui-site-color-4:@background-color-error;
+@ui-site-color-5:darken(@background-color-success,10%);
+
+// Sizes
+@font-size:12px;
+@input-font-size:14px;
+
+@disclosure-arrow-size:12px;
+
+@component-padding:10px;
+@component-icon-padding:5px;
+@component-icon-size:16px;
+@component-line-height:25px;
+
+@tab-height:30px;
+
+// Misc
+@component-border-radius:6px;
+@font-family:'.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;

@@ -1,0 +1,42 @@
+// Buttons
+.btn {
+  color:darken(@text-color-highlight, 30%);
+  background-color:@button-background-color;
+  border:0;
+  height:inherit;
+
+  &:hover, &:focus {
+    color:@text-color-selected;
+    background-color:@button-background-color-hover;
+  }
+  &:active {
+    color:fade(@text-color-selected, 66%);
+    background-color:darken(@button-background-color, 2%);
+  }
+  &.selected {
+    color:@text-color-success;
+    background-color:@button-background-color-selected;
+  }
+  &:focus, &:focus:active { outline:none; }
+}
+
+
+// Colored buttons
+.btn.btn-primary { .btn-color(@background-color-info); }
+.btn.btn-info    { .btn-color(@background-color-info); }
+.btn.btn-success { .btn-color(@background-color-success); }
+.btn.btn-warning { .btn-color(@background-color-warning); }
+.btn.btn-error   { .btn-color(@background-color-error); }
+.fatal .btn.btn-error:not(.close-all) { .btn-color(@background-color-fatal); }
+
+.btn-color(@bg) {
+  color:@text-color-selected;
+  background-color:@bg;
+  &:hover, &:focus { background-color:darken(@bg, 4%); }
+  &:active { background-color:darken(@bg, 4%); }
+  &.selected { background-color:darken(@bg, 4%); }
+  &.selected:focus, &.selected:hover { background-color:darken(@bg, 8%); }
+}
+
+// Misc
+.btn.icon.icon-gear { background:transparent; }

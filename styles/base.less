@@ -1,0 +1,86 @@
+body {
+  font-size: @font-size;
+  color: @text-color;
+  background-color: @app-background-color;
+}
+
+a { color:@background-color-info; }
+
+atom-pane {
+  border-right: 1px solid @base-border-color;
+  &:last-child { border-right: none; }
+}
+
+.input-checkbox:checked,
+.input-toggle:checked { background:@background-color-success; }
+
+
+// Styleguide
+.styleguide {
+  .styleguide-header {
+    padding:@component-padding * 3;
+    background:darken(@background-color-info,10%);
+    border:0;
+  }
+  .styleguide-sections {
+    section {
+      background:
+      transparent;border:0;
+      h1.section-heading { margin-top:@component-padding * 4; }
+      h2 { margin-top:@component-padding * 4; }
+
+      .example-rendered {
+        background:darken(@base-background-color,2%);
+        border:0;
+        padding:@component-padding * 3;
+      }
+      .example-code {
+        background:@base-background-color;
+        border:2px solid darken(@base-background-color,2%);
+      }
+      .list-group .selected::before, .list-tree .selected::before { opacity:.4; }
+    }
+  }
+}
+
+// Notifications
+atom-notifications atom-notification {
+  &:not(:last-of-type) { margin-bottom:@component-padding * 1; }
+  box-shadow:2px 2px 4px darken(@base-background-color,10%);
+  &::before { background:lighten(@base-background-color,4%)!important; }
+  &.fatal code, &.fatal a:not(.btn), &.fatal::before { color:darken(@text-color-fatal,10%)!important; }
+  &.error code, &.error a:not(.btn), &.error::before { color:darken(@text-color-error,10%)!important; }
+  &.warning code, &.warning a:not(.btn), &.warning::before { color:darken(@text-color-warning,10%)!important; }
+  &.success code, &.success a:not(.btn), &.success::before { color:darken(@text-color-success,10%)!important; }
+  &.info code, &.info a:not(.btn), &.info::before { color:@text-color-info!important; }
+  code { background:transparent!important;margin-top:@component-padding;display:block; }
+  .item { background:darken(@background-color-reverse,10%);color:@text-color-reverse; }
+  .message { color:@text-color-reverse; }
+  .detail { background:@background-color-reverse;color:darken(@text-color-info,4%); }
+  .meta .description { color:darken(@text-color-info,4%); }
+  .btn.close-all { background:darken(@background-color-info,4%);color:@text-color!important;border:0!important; }
+  .btn.close-all:hover { background:darken(@background-color-info,8%)!important; }
+  .btn-copy-report::before { color:@text-color;vertical-align:middle; }
+  .close.icon { color:@text-color-info; &:hover { color:darken(@text-color-info,4%); } }
+}
+
+// Settings
+.settings-view {
+  .text { color:darken(@text-color-selected,40%); }
+  .settings-panel .control-group + .control-group { margin-top:@component-padding * 4; }
+  .config-menu { background:darken(@base-background-color,3%); }
+  .panels-menu a { color:@text-color-info; }
+  .package-card { background:lighten(@base-background-color,2%);border-radius:@component-border-radius; }
+  .package-card:hover { background:darken(@base-background-color,1%); }
+  .package-description { color:@text-color-info; }
+  .stats-item .value { color:@text-color-success; }
+  .setting-title { color:@text-color-selected; }
+  .section-container, .setting-description { color:darken(@text-color-selected,50%); }
+  .alert-info { background:darken(@base-background-color,2%);color:@text-color-info; }
+  select.form-control { background:@input-background-color;border-color:@input-border-color;height:@tab-height; }
+  thead { background:darken(@base-background-color,2%);color:darken(@text-color-selected,20%); }
+}
+
+// Misc
+.input-checkbox { border-radius:@component-border-radius / 2; }
+.atom-dock-mask { background:lighten(@base-background-color,2%);border-left:2px solid @base-border-color; }

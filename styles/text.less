@@ -1,0 +1,32 @@
+// Text
+.text-smaller { font-size:calc(@font-size * .9); }
+
+.text-subtle    { color:@text-color-subtle; }
+.text-highlight { color:@text-color-highlight; }
+
+.text-info    { color:@text-color-info; }
+.text-success { color:@text-color-success; }
+.text-warning { color:@text-color-warning; }
+.text-error   { color:@text-color-error; }
+
+
+// Highlights
+.highlight         { .highlight-mixin(@background-color-highlight);color:@text-color-highlight; }
+.highlight-info    { .highlight-mixin(@background-color-info); }
+.highlight-warning { .highlight-mixin(@background-color-warning); }
+.highlight-error   { .highlight-mixin(@background-color-error); }
+.highlight-success { .highlight-mixin(@background-color-success); }
+
+.highlight-mixin(@color) {
+  padding:2px 8px;
+  color:lighten(@text-color-highlight, 20%);
+  border-radius:@component-border-radius;
+  background-color:@color;
+}
+
+
+// Background Message
+.background-message {
+  font-weight:bold;
+  color:@text-color-subtle;
+}

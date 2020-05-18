@@ -1,0 +1,20 @@
+// Panels
+.panel-heading {
+  border-bottom:0;
+  background-color:@panel-heading-background-color;
+}
+
+.inset-panel {
+  background-color:@inset-panel-background-color;
+  .panel-heading { background-color:lighten(@inset-panel-background-color, 4%); }
+}
+
+
+// Modal
+atom-panel.modal {
+  border:0;
+  border-top:none;
+  box-shadow:0 2px 8px 1px hsla(0,0%,0%,.3);
+  .editor.mini { background:darken(@input-background-color,4%) }
+  li:not(.selected):hover { background:@background-color-highlight; }
+}

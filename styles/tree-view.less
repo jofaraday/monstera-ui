@@ -1,0 +1,13 @@
+// Tree View
+.tree-view-resizer { border-right:1px solid @base-border-color; }
+
+.tree-view {
+  color:darken(@text-color-selected,40%);
+  .header.list-item { color:darken(@text-color-selected,20%); }
+  .list-item:hover { background-color:@base-background-color; }
+  .list-item.selected { background-color:lighten(@base-background-color,2%); }
+  .list-item.selected::before { background-color:transparent; }
+  .list-item { color:darken(@text-color-selected,30%); }
+  .list-item.status-modified { color:@text-color-warning; }
+  .list-item.status-added { color:lighten(@text-color-info,8%); }
+}
